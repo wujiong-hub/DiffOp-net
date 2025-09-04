@@ -27,19 +27,7 @@ mkdir logs
 python networkTraining.py Config_adni.ini 48 0
 ```
 ## Testing
-1. Do the inference process directly adopt our trained model:
-```python
-cd pretrained_weights/
-wget https://huggingface.co/jwu2009/CDPDNet/resolve/main/cdpdnet.pth
-cd ../
-CUDA_VISIBLE_DEVICES=0 python test.py --data_root_path DATA_DIR --resume pretrained_weights/cdpdnet.pth --store_result 
-```
-
-2. Do the inference process using your own trained model:
-```python
-CUDA_VISIBLE_DEVICES=0 python test.py --data_root_path DATA_DIR --resume CHECKPOINT_PATH --store_result 
-```
-
+python networkRegistration.py FCN_registration_adni.ini 48 ./logs/path_to_checkpoint
 
 
 
