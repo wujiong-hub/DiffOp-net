@@ -27,8 +27,9 @@ mkdir logs
 python networkTraining.py Config_adni.ini 48 0
 ```
 ## Testing
+```python
 python networkRegistration.py FCN_registration_adni.ini 48 ./logs/path_to_checkpoint
-
+```
 
 
 
